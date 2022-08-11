@@ -3,7 +3,7 @@ from spotipy.oauth2 import SpotifyOAuth
 import getpass
 import pandas as pd
 import numpy as np
-from IPython import display
+
 
 
 client_id = '94c7d23dac2a4225a3ecb57cce99966c' #getpass.getpass()
@@ -31,6 +31,8 @@ def frame_maker(link):
     df[['Hit', 'Dance_miss', 'Energy_miss', 'Valence_miss']] = df.apply(hit_detector,axis = 1, result_type='expand')
 
     return df
+
+
 
 
 def hit_detector(row):
@@ -83,6 +85,59 @@ def hit_detector(row):
         return needs
 
 
+def playlist_dataframe(playlist_link):
+
+    playlist_URI = playlist_link.split("/")[-1].split("?")[0]
+
+    track_uris = [x["track"]["uri"] for x in sp.playlist_tracks(playlist_URI)["items"]] 
+
+    df = pd.DataFrame(columns=['artist_name','track_name','album_name','release_date','artist_popularity','track_popularity', 'artist_genres','danceability',
+    'energy','key','loudness','mode','speechiness','acousticness','instrumentalness','liveness','valence','tempo','type','id','uri','track_href','analysis_url',
+    'duration_ms','time_signature'])
+
+
+
+    for track in sp.playlist_tracks(playlist_URI)["items"]:
+
+        info_vector = []
+        #URI
+        track_uri = track["track"]["uri"]
+        
+        #Track name
+        track_name = track["track"]["name"]
+        
+        #Main Artist
+        artist_uri = track["track"]["artists"][0]["uri"]
+        artist_info = sp.artist(artist_uri)
+        
+        #Name, popularity, genre
+        artist_name = track["track"]["artists"][0]["name"]
+        artist_pop = artist_info["popularity"]
+        artist_genres = artist_info["genres"]
+        
+        #Album
+        album = track["track"]["album"]["name"]
+        #Release Date
+        release_date = track['track']['album']['release_date'] ## keep full date 
+
+        #Popularity of the track
+        track_pop = track["track"]["popularity"]
+
+        info_vector = [artist_name,track_name,album,release_date,artist_pop,track_pop,artist_genres]
+
+        info_vector.extend(list((sp.audio_features(track_uri)[0].values())))
+
+
+        df.loc[len(df)] = info_vector
+
+    df[['Hit', 'Dance_miss', 'Energy_miss', 'Valence_miss']] = df.apply(hit_detector,axis = 1, result_type='expand')
+
+    return df
+
+
+
 track =frame_maker('https://open.spotify.com/track/2MZSXhq4XDJWu6coGoXX1V?si=6b38baf17f9f4964')
 print(track)
 
+playlist = playlist_dataframe('https://open.spotify.com/playlist/08FwuC2mWOk78HgL30lvk8?si=330dafcc50e24282')
+print(playlist)
