@@ -30,8 +30,8 @@ Based on our study, we decided to create a product to help musicians and publish
 
 Preview:
 
-![Screenshot1](screenshots\ss1.png?raw=True)
+![Screenshot1](https://raw.githubusercontent.com/andersgom/project5-week6/main/screenshots/ss1.png)
 
 <br>
 
-![Screenshot2](screenshots\ss2.png?raw=True)
+![Screenshot2](https://raw.githubusercontent.com/andersgom/project5-week6/main/screenshots/ss2.png)
