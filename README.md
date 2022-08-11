@@ -28,8 +28,10 @@ Based on our study, we decided to create a product to help musicians and publish
 
 <br>
 
-![Esta es una imagen](screenshots\ss1.png)
+Preview:
+
+![Screenshot1](screenshots\ss1.png?raw=True)
 
 <br>
 
-![Esta es una imagen](screenshots\ss2.png)
+![Screenshot2](screenshots\ss2.png?raw=True)
