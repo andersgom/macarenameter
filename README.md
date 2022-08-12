@@ -2,7 +2,7 @@
 
 ### Ironhack Data Analytics Bootcamp
 
-## **Spanish summer hits**
+## **Macarenameter**
 
 ### *(A recipe Recipe for the next summer hit)*
 
