@@ -131,7 +131,7 @@ def playlist_dataframe(playlist_link):
 
 
 track =frame_maker('https://open.spotify.com/track/2MZSXhq4XDJWu6coGoXX1V?si=6b38baf17f9f4964')
-print(track)
+#print(track)
 
 playlist = playlist_dataframe('https://open.spotify.com/playlist/08FwuC2mWOk78HgL30lvk8?si=330dafcc50e24282')
-print(playlist)
+#print(playlist)
