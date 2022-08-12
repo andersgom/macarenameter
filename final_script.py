@@ -75,7 +75,7 @@ def hit_detector(row):
         hit_score += 0
 
 
-    if hit_score >= 3:
+    if hit_score >= 2.5:
         #print(needs)
 
         return (1, 0,0,0)
