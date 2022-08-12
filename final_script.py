@@ -1,14 +1,8 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import getpass
 import pandas as pd
 import numpy as np
-
-
-
-client_id = '94c7d23dac2a4225a3ecb57cce99966c' #getpass.getpass()
-client_secret = "5a0d909aa4f74df9b98153f5a6cd4a60" # getpass.getpass()
-
+from keys import *
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id,
