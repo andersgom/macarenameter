@@ -28,6 +28,10 @@ Based on our study, we decided to create a product to help musicians and publish
 
 <br>
 
+Check the presentation [here](https://www.canva.com/design/DAFJCfJyGAo/weeV2VB-9wWl9SbYC17Nng/view?utm_content=DAFJCfJyGAo&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu).
+
+<br>
+
 Preview:
 
 ![Screenshot1](https://raw.githubusercontent.com/andersgom/project5-week6/main/screenshots/ss1.png)
