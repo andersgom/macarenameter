@@ -1,14 +1,17 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import getpass
 import pandas as pd
 import numpy as np
+<<<<<<< HEAD
 
 
 
 client_id = '' #getpass.getpass()
 client_secret = "" # getpass.getpass()
 
+=======
+from keys import *
+>>>>>>> 9744ec4f51e5d6713149b56d4bc00ff3c8ef92e9
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id,
@@ -137,7 +140,11 @@ def playlist_dataframe(playlist_link):
 
 
 track =frame_maker('https://open.spotify.com/track/2MZSXhq4XDJWu6coGoXX1V?si=6b38baf17f9f4964')
-print(track)
+#print(track)
 
 playlist = playlist_dataframe('https://open.spotify.com/playlist/08FwuC2mWOk78HgL30lvk8?si=330dafcc50e24282')
+<<<<<<< HEAD
 print(playlist)
+=======
+#print(playlist)
+>>>>>>> 9744ec4f51e5d6713149b56d4bc00ff3c8ef92e9

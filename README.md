@@ -2,7 +2,7 @@
 
 ### Ironhack Data Analytics Bootcamp
 
-## **Spanish summer hits**
+## **Macarenameter**
 
 ### *(A recipe Recipe for the next summer hit)*
 
@@ -25,6 +25,10 @@ We analized the most popular summer songs in Spain since 1989 and compare them w
 ### **The  product**
 
 Based on our study, we decided to create a product to help musicians and publishers identify those tracks that can be potential summer hits in Spain. The `Macarenameter` will analize any song or playlist and will let you know which songs would qualify as potential summer hits.
+
+<br>
+
+Check the presentation [here](https://www.canva.com/design/DAFJCfJyGAo/weeV2VB-9wWl9SbYC17Nng/view?utm_content=DAFJCfJyGAo&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu).
 
 <br>
 
